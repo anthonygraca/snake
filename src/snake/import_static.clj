@@ -1,7 +1,7 @@
-(ns snake.import-static
+(ns snake.import_static
   (:require [clojure.set :refer :all]))
 
-(defmacro import-static
+(defmacro import_static
   "Imports the named static fields and/or static methods of the class
   as (private) symbols in the current namespace.
 

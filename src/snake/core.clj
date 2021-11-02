@@ -2,9 +2,9 @@
   (:import (java.awt Color Dimension) 
       	   (javax.swing JPanel JFrame Timer JOptionPane)
            (java.awt.event ActionListener KeyListener))
-  (:refer snake.import-static :refer :all))
+  (:require [snake.import_static :as impt]))
 
-(import-static java.awt.event.KeyEvent VK_LEFT VK_RIGHT VK_UP VK_DOWN)
+(impt/import_static java.awt.event.KeyEvent VK_LEFT VK_RIGHT VK_UP VK_DOWN)
 
 (def width 75)
 (def height 50)
@@ -31,7 +31,7 @@
 (defn create-snake []
   {:body (list [1 1])
    :dir [1 0]
-   :type :sname
+   :type :snake
    :color (Color. 15 160 70)})
 
 (defn move [{:keys [body dir] :as snake} & grow]
@@ -100,7 +100,7 @@
         (JOptionPane/showMessageDialog frame "You lose!"))
       (when (win? @snake)
         (reset-game snake apple)
-        (JOptionPane/showMessageDialog frame "Yoi win!"))
+        (JOptionPane/showMessageDialog frame "You win!"))
       (.repaint this))
     (keyPressed [e]
       (update-direction snake (dirs (.getKeyCode e))))
@@ -125,3 +125,5 @@
       (.setVisible true))
     (.start timer)
     [snake, apple, timer]))
+
+(defn -main [] (game))
