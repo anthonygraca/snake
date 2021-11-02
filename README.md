@@ -20,9 +20,8 @@ generated on the board) with your snake (represented as a long green bar that
 grows every time you eat an apple). You control your snake with your arrow keys
 and the goal is to not collide with your own body.
 
-![snake-1](https://github.com/anthonygraca/snake/screenshots/snake-1.png)
-
-![snake-2](https://github.com/anthonygraca/snake/screenshots/snake-2.png)
+![snake-1](https://github.com/anthonygraca/snake/blob/main/screenshots/snake-1.png)
+![snake-2](https://github.com/anthonygraca/snake/blob/main/screenshots/snake-2.png)
 
 ## How to Build and Run
 ### Clojure Code with Leiningen
@@ -57,6 +56,15 @@ cd snake
 ```
 lein run 
 ```
+
+## What Amazed Me
+- This game was just written with ~120 lines of clojure code and most of the
+  pure functions are TINY. Even GUI portion is around 15-20 lines of code.
+- I am not a game programmer but whenever I try, I always have some
+  ```while(true)``` statement that shoots my CPU utilization to 100%. I
+  retrospect, it was probably because I am not using a proper game dev library.
+  However, this game is portable since it is on the JVM and it barely uses CPU
+  and memory compared to what I was expecting!
 
 ## License
 
