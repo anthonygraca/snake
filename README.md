@@ -1,10 +1,62 @@
 # Snake
 
+Oh my goodness. Who would have known that you can do interesting things with
+a functional programming language? I surely didn't!
+
 Implementation of Snake in Clojure
 
-## Usage
+This is me playing around with Clojure, specifically getting used to how 
+mutable data is handled through ```refs``` and ```transactions```.
 
-FIXME
+I also dove into the deep-end and I wanted to move away from vim. I was using
+[emacs](https://www.gnu.org/software/emacs/) with [CIDER](https://cider.mx/).
+My initial assessment of emacs is that is is a wonderful environment for
+programming in lisp-y dialects. However, I am still much much faster with vim +
+another terminal serving as the repl.
+
+## How to Play
+The goal of the game is to grab 15 apples (represented as red bars that are randomly
+generated on the board) with your snake (represented as a long green bar that
+grows every time you eat an apple). You control your snake with your arrow keys
+and the goal is to not collide with your own body.
+
+![snake-1](https://github.com/anthonygraca/snake/screenshots/snake-1.png)
+
+![snake-2](https://github.com/anthonygraca/snake/screenshots/snake-2.png)
+
+## How to Build and Run
+### Clojure Code with Leiningen
+[Leiningen](https://leiningen.org) is the build tool that manages all of the
+Clojure code in this project. Code runs on a JVM environment so Java is
+required.
+
+Instructions on how to [install Clojure](https://clojure.org/guides/getting_started).
+
+### Inital Setup 
+1.) Grab the lein installation script
+```
+wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
+```
+2.) Make script into a executable
+```
+chmod +x lein
+```
+3.) Move lein script into a location accessible in $PATH
+``` 
+mv lein ~/bin
+```
+4.) Checkout this personal website code base
+```
+git clone git@github.com:anthonygraca/snake.git
+```
+5.) Change directory into repo
+```
+cd snake
+```
+6.) Run lein
+```
+lein run 
+```
 
 ## License
 
