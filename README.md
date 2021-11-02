@@ -3,10 +3,10 @@
 Oh my goodness. Who would have known that you can do interesting things with
 a functional programming language? I surely didn't!
 
-Implementation of Snake in Clojure
+Implementation of Snake in Clojure.
 
 This is me playing around with Clojure, specifically getting used to how 
-mutable data is handled through ```refs``` and ```transactions```.
+game state could be handled with mutable data through ```refs``` and ```transactions```.
 
 I also dove into the deep-end and I wanted to move away from vim. I was using
 [emacs](https://www.gnu.org/software/emacs/) with [CIDER](https://cider.mx/).
@@ -15,7 +15,7 @@ programming in lisp-y dialects. However, I am still much much faster with vim +
 another terminal serving as the repl.
 
 ## How to Play
-The goal of the game is to grab 15 apples (represented as red bars that are randomly
+The goal of the game is to grab 5 apples (represented as red bars that are randomly
 generated on the board) with your snake (represented as a long green bar that
 grows every time you eat an apple). You control your snake with your arrow keys
 and the goal is to not collide with your own body.
@@ -61,7 +61,7 @@ lein run
 - This game was just written with ~120 lines of clojure code and most of the
   pure functions are TINY. Even GUI portion is around 15-20 lines of code.
 - I am not a game programmer but whenever I try, I always have some
-  ```while(true)``` statement that shoots my CPU utilization to 100%. I
+  ```while(true)``` statement that shoots my CPU utilization to 100%. In
   retrospect, it was probably because I am not using a proper game dev library.
   However, this game is portable since it is on the JVM and it barely uses CPU
   and memory compared to what I was expecting!
