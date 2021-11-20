@@ -1,6 +1,6 @@
 # Snake
 
-Oh my goodness. Who would have known that you can do interesting things with
+Oh my goodness. Who could have known that you can do interesting things with
 a functional programming language? I surely didn't!
 
 Implementation of Snake in Clojure.
@@ -8,14 +8,14 @@ Implementation of Snake in Clojure.
 This is me playing around with Clojure, specifically getting used to how 
 game state could be handled with mutable data through ```refs``` and ```transactions```.
 
-I also dove into the deep-end and I wanted to move away from vim. I was using
+I also dove into the deep-end without my lifejacket as I moved away from using vim. I was using
 [emacs](https://www.gnu.org/software/emacs/) with [CIDER](https://cider.mx/).
-My initial assessment of emacs is that is is a wonderful environment for
-programming in lisp-y dialects. However, I am still much much faster with vim +
-another terminal serving as the repl.
+My initial assessment of emacs is that it is a wonderful environment for
+programming in lisp-y dialects. However, I am still so much faster with vim
+while using another terminal as the repl.
 
 ## How to Play
-The goal of the game is to grab 5 apples (represented as red bars that are randomly
+The goal of the game is to grab 15 apples (represented as red bars that are randomly
 generated on the board) with your snake (represented as a long green bar that
 grows every time you eat an apple). You control your snake with your arrow keys
 and the goal is to not collide with your own body.
@@ -44,7 +44,7 @@ chmod +x lein
 ``` 
 mv lein ~/bin
 ```
-4.) Checkout this personal website code base
+4.) Checkout this snake code base
 ```
 git clone git@github.com:anthonygraca/snake.git
 ```
@@ -59,11 +59,11 @@ lein run
 
 ## What Amazed Me
 - This game was just written with ~120 lines of clojure code and most of the
-  pure functions are TINY. Even GUI portion is around 15-20 lines of code.
+  pure functions are TINY. Even the GUI portion is only around 15-20 lines of code.
 - I am not a game programmer but whenever I try, I always have some
   ```while(true)``` statement that shoots my CPU utilization to 100%. In
   retrospect, it was probably because I am not using a proper game dev library.
-  However, this game is portable since it is on the JVM and it barely uses CPU
+  Also, this game is portable since it is on the JVM and it barely uses CPU
   and memory compared to what I was expecting!
 
 ## License
